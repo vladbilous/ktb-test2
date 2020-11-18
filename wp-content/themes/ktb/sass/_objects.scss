@@ -1,0 +1,425 @@
+.objects {
+
+    .objects__title {
+        margin-top: 50px;
+    }
+
+    .objects__title-h2 {
+        font-family: Black;
+        color: #023f2c;
+        font-size: 67px;
+
+        opacity: 0;
+        -webkit-transform: translateX(-10rem);
+        transform: translateX(-10rem);
+        transition: transform 3s, opacity 2s;
+
+        //margin-left: -800px;
+        //transition: transform .5s ease-in-out;
+
+        &.scroll-title {
+            opacity: 1;
+            transform: translateX(0);
+
+            //transform: translate(800px,0);
+            //-webkit-transform: translate(800px,0); /** Chrome & Safari **/
+            //-o-transform: translate(800px,0); /** Opera **/
+            //-moz-transform: translate(800px,0); /** Firefox **/
+            //width: fit-content;
+
+        }
+    }
+
+
+    .small-line-objects {
+
+
+        height: 9px;
+        width: 60px;
+        background-color: #023f2c;
+        opacity: 0;
+        -webkit-transform: translateX(-10rem);
+        transform: translateX(-10rem);
+        transition: transform 3s, opacity 2s;
+
+        //height: 0;
+        //width: 0;
+        //transition: all 1.5s;
+
+        &.scroll-line {
+            opacity: 1;
+            transform: translateX(0);
+
+            //height: 9px;
+            //width: 60px;
+        }
+    }
+
+
+    .map {
+        position: relative;
+        width: 100%;
+        z-index: 4;
+        margin: 0 auto;
+
+        opacity: 0;
+        -webkit-transform: translateY(15rem);
+        transform: translateY(15rem);
+        transition: transform 4s, opacity 2s;
+
+        &.map-anime {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .map__img {
+            width: 100%;
+        }
+        //.map__kiev {
+        //    opacity: 0;
+        //    position: absolute;
+        //    left: 40.7%;
+        //    width: 15%;
+        //    top: 10.3%;
+        //    z-index: 5;
+        //
+        //    &:hover {
+        //        opacity: 1;
+        //    }
+        //}
+
+        .kiev,
+        .cherkasy,
+        .khmelnitskyi,
+        .rivne,
+        .lviv,
+        .chernivtsi,
+        .ivano-frankivsk,
+        .zakarpattia,
+        .sum,
+        .vinitsa,
+        .kharkiv,
+        .dnipro,
+        .mykolaiv,
+        .kirovograd,
+        .zaporizhzhia{
+            &:hover .cls-1{
+            //fill: #909090c4;
+            //fill: #768c84 !important;
+            fill: #768c846b !important;
+            cursor: pointer;
+
+            }
+
+            text{
+                fill: black!important;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .cls-2 {
+                fill: #023f2c!important;
+                opacity: 0;
+                transition: 4s;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &.cls-2-load {
+                    opacity: 1;
+                }
+            }
+        }
+
+        text {
+            fill: black!important;
+            &:hover {
+                cursor: pointer;
+            }
+            tspan {
+                font-family: GothamPro, Gotham Pro;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        .active-region .cls-1 {
+            fill: #768c84 !important;
+        }
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    //.active-region * {
+    //    fill: #909090c4;
+    //}
+
+
+
+    //.kiev.one-region.active-region {
+    //    .region-kiev {
+    //        display: block;
+    //    }
+    //}
+
+
+    .regions {
+        margin: 100px 0 300px;
+
+        .region-kiev,
+        .region-zakarpattia,
+        .region-ivano-frankivsk,
+        .region-lviv,
+        .region-rivne,
+        .region-khmelnitskyi,
+        .region-chernivtsi,
+        .region-cherkasy,
+        .region-mykolaiv,
+        .region-sum,
+        .region-dnipro,
+        .region-vinnitsa,
+        .region-kharkiv,
+        .region-kirovograd,
+        .region-zaporizhzhia{
+            //display: none;
+
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .region-khmelnitskyi {
+            svg {
+                width: 70%;
+            }
+        }
+
+        .min-active-region {
+            height: auto!important;
+        }
+
+        .region__one {
+            display: flex;
+        }
+
+        .kiev-kalunivka-indystrialna-marker2,
+        .kiev-grygorenka1-marker2,
+        .kiev-brovaru-gryshevskogo-marker2{
+            display: none;
+        }
+
+        .one-region-map {
+            width: 40%;
+            margin-right: 80px;
+            //display: grid;
+            //place-items: center;
+        }
+
+        .info-places {
+            //width: 70%;
+            width: calc(60% - 80px);
+            padding: 50px 40px;
+            background-color: #e6e7e8;
+            margin-top: 38px;
+            //height: fit-content;
+            //margin: auto;
+        }
+
+        .reg {
+            width: 100%;
+        }
+
+        g:hover {
+            .cls-3, .st3 {
+                fill: #768c846b !important;
+                //stroke: #023f2c;
+                //stroke-width: 1px;
+            }
+        }
+
+
+        .active-place {
+            fill: #768c84;
+            //stroke: #023f2c;
+            //stroke-width: 1px;
+
+            .cls-3, .st3 {
+                fill: #768c84;
+                //stroke: #023f2c;
+                //stroke-width: 1px;
+            }
+            .st2{
+                fill: #023f2c;
+                stroke: #023f2c;
+                stroke-width: 1px;
+            }
+            //.st3{
+            //    fill: #768c84;
+            //    stroke: #023f2c;
+            //    stroke-width: 1px;
+            //}
+        }
+
+        .hust,
+        .kiev-brovaru-gryshevskogo,
+        .kiev-epicentr-boruspil,
+        .kiev-brovaru-mcdonalds,
+        .kiev-brovaru-chornovola,
+        .kiev-grygorenka2,
+        .kiev-grygorenka1,
+        .kiev-brovaru-sholom,
+        .kiev-kalunivka-indystrialna2,
+        .kiev-kalunivka-indystrialna,
+        .kiev-bila-tserkva,
+        .kiev-kalinivka,
+        .kiev-str-crystal,
+        .kiev-polyarna,
+        .kiev-epicenter-viskozna,
+        .kiev-sabodana2b,
+        .kiev-zelenogorsk,
+        .kiev-epicenter-paladina-k6,
+        .kiev-epicenter-bukovecka-k6,
+        .kiev-epicenter-k2,
+        .kharkiv-torgcenter,
+        .chernivtsi-epicentr,
+        .lviv-drohobych,
+        .lviv-strui,
+        .brovaru,
+        .slavyta,
+        .shepetivka,
+        .starokostiantyniv,
+        .pruzhne {
+            //display: none;
+        }
+
+        .st3:hover,
+        .st2:hover {
+            cursor:pointer;
+        }
+
+        .place__slider {
+            margin-top: 30px;
+            padding: 0 25px;
+
+
+
+            img {
+                width: 100%;
+            }
+
+            .slick-slide {
+                padding: 0 8px;
+            }
+
+
+            .slick-next:before,
+            .slick-prev:before {
+                content: ' ';
+            }
+
+            .slick-prev {
+                background-image: url(images/slider-oblast/arr-left.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 19px;
+                height: 29px;
+                //z-index: 5;
+                left: 0;
+            }
+
+            .slick-next {
+                background-image: url(images/slider-oblast/arr-right.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 19px;
+                height: 29px;
+                right: 0;
+                //z-index: 5;
+            }
+        }
+
+
+        .place {
+            height: 0px;
+            overflow: hidden;
+            opacity: 0;
+            transition: 3s;
+
+            .place__title-h2 {
+                font-family: Black;
+                color: #023f2c;
+                //font-size: 55px;
+                font-size: 40px;
+                text-transform: uppercase;
+            }
+
+            .small-line-place {
+                margin-top: 5px;
+                height: 9px;
+                width: 60px;
+                background-color: #023f2c;
+                transition: all 1.5s;
+            }
+
+            .place__address {
+                margin-top: 20px;
+
+                *{
+                    //font-size: 21px;
+                    font-size: 16px;
+                    //line-height: 36px;
+                    line-height: 23px;
+                    font-family: GothicRegular;
+                }
+            }
+
+            .place__work-tech {
+                display: flex;
+
+                .place__work {
+                    padding-right: 60px;
+                }
+            }
+
+            .title-works, .title-technologies {
+                text-transform: uppercase;
+                //font-size: 17px;
+                font-size: 14px;
+                font-family: GothicBold;
+                margin-top: 30px;
+            }
+
+            .title-works__list,
+            .title-technologies__list {
+                list-style: square;
+                li{
+                    //line-height: 35px;
+                    line-height: 23px;
+                    //font-size: 17px;
+                    font-size: 14px;
+                    font-family: GothicRegular;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .active-place-info {
+            opacity: 1;
+            height: auto;
+            //height: 0px;
+            //overflow: hidden;
+        }
+
+    }
+}

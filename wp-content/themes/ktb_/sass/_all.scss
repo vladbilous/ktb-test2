@@ -1,0 +1,410 @@
+@font-face {
+    font-family: Regular; /* Имя шрифта */
+    src: url(fonts/GothamProRegular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Light; /* Имя шрифта */
+    src: url(fonts/GothamProLight.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Medium; /* Имя шрифта */
+    src: url(fonts/GothaProMed.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Black; /* Имя шрифта */
+    src: url(fonts/GothamProBlack.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: GothicBold; /* Имя шрифта */
+    src: url(fonts/CenturyGothicBold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: GothicRegular; /* Имя шрифта */
+    src: url(fonts/CenturyGothicRegular.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+*{
+    //line-height: 25px;
+    margin: 0;
+    padding: 0;
+    font-family: Regular;
+}
+
+.h1 {
+    /*font-family: Medium;*/
+    font-family: Black;
+    //line-height: 40px;
+    font-size: 67px;
+
+    color: #023f2c;
+
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+    transition: transform 3s, opacity 2s;
+
+
+    //margin-left: -800px;
+    //transition: transform .5s ease-in-out;
+}
+
+.h1.scroll-title {
+
+    //transform: translate(800px,0);
+    //-webkit-transform: translate(800px,0); /** Chrome & Safari **/
+    //-o-transform: translate(800px,0); /** Opera **/
+    //-moz-transform: translate(800px,0); /** Firefox **/
+    //width: fit-content;
+
+
+
+
+    opacity: 1;
+    transform: translateX(0);
+
+}
+
+.h2 {
+    letter-spacing: 5px;
+}
+
+h2, h3 {
+      /*font-family: Medium;*/
+      font-family: Black;
+      //line-height: 40px;
+      font-size: 67px;
+
+      color: #023f2c;
+}
+.current-menu-item {
+    a{
+        color: #023f2c;
+        font-weight: 600;
+    }
+}
+
+
+h4, h5, h6 {
+    /*font-family: Medium;*/
+    font-family: Regular;
+    //line-height: 40px;
+}
+
+p, span, i {
+    font-family: Regular;
+}
+
+.position-relative {
+    position: relative;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.ktb {
+    padding: 0 270px;
+}
+
+.logo {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+    transform: translateY(-5rem);
+    transition: transform 3s, opacity 2s;
+
+    &.logo-anime {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-menu {
+    z-index: 1;
+    display: flex;
+    position: relative;
+
+
+    .block-menu {
+
+        position: relative;
+        width: 100%;
+        opacity: 0;
+        transition: 3s;
+
+        .menu-menu-container,
+        .menu-menu-ru-container,
+        .menu-menu-en-container {
+            float: right;
+            margin-top: 50px;
+
+            a {
+                text-transform: uppercase;
+            }
+        }
+
+        &.block-menu-load {
+            opacity: 1;
+        }
+    }
+
+    .block-logo {
+
+    }
+
+    .menu {
+        display: flex;
+        margin: 0;
+        //background-color: white;
+        background-color: #ffffffab;
+        padding: 22px 0;
+
+        li {
+            list-style: none;
+            padding: 5px 34px;
+            border-right: 1px solid black;
+
+            a {
+                text-decoration: unset;
+                color: black;
+                font-size: 16px;
+            }
+            a:hover {
+                color: #023f2c;
+                font-weight: 600;
+            }
+        }
+
+        li:last-child {
+            border-right: unset;
+        }
+    }
+
+    .block-lang {
+        position: absolute;
+        right: -59px;
+        margin-top: 56px;
+        list-style: none;
+
+        .current-lang {
+            a{
+                font-family: Black;
+            }
+        }
+
+        a {
+            text-decoration: unset;
+            color: #002c1b;
+            font-size: 13px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
+.row7 {
+    .block-menu-footer {
+        width: 100%;
+
+        .menu-menu-container,
+        .menu-menu-ru-container,
+        .menu-menu-en-container {
+            width: fit-content;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+
+    .menu {
+        display: flex;
+        margin: 0;
+        background-color: white;
+        padding: 22px 0;
+
+        li {
+            list-style: none;
+            padding: 5px 34px;
+            border-right: 1px solid black;
+
+            a {
+                text-decoration: unset;
+                color: black;
+                font-size: 16px;
+            }
+
+            a:hover {
+                color: #023f2c;
+                font-weight: 600;
+            }
+        }
+
+        li:last-child {
+            border-right: unset;
+        }
+    }
+}
+
+
+
+.big-line {
+    height: 26px;
+    width: 100%;
+    background-color: #023f2c;
+}
+
+.relavive-hiden {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-mobile {
+    display: none;
+    //margin: auto;
+    margin-left: 64%;
+}
+
+
+.mobile-lang {
+    display: none;
+
+    .current-lang {
+        font-weight: 900;
+    }
+}
+
+.block-lang-mobile {
+    list-style: none;
+    display: flex;
+    margin-top: 18px;
+    //height: max-content;
+    height: 21px;
+    a {
+        text-decoration: unset;
+        color: white;
+        font-size: 10px;
+
+    }
+
+    li {
+        border-right: 2px solid white;
+        padding: 0 5px;
+    }
+
+    li:last-child {
+        border-right: unset;
+    }
+}
+
+
+
+
+//mob menu
+.menu-mobile {
+    display: none;
+}
+
+.menu-popup li.menu-item {
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.menu-triger {
+    display: block;
+    width: 30px;
+    height: 20px;
+    background: url(/wp-content/themes/ktb/images/mob-menu.png) 0 0 repeat;
+    position: absolute;
+    //left: 15px;
+    //top: 28px;
+    //right: 11%;
+    top: 22px;
+    left: 15px;
+}
+
+.menu-close {
+    display: block;
+    //width: 28px;
+    //height: 28px;
+    width: 23px;
+    height: 23px;
+    background: url(/wp-content/themes/ktb/images/mob-menu-close.png) 0 0 repeat;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+}
+.menu-popup {
+    display: none;
+    background: white;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0;
+    box-sizing: border-box;
+    padding: 80px 30px 30px 30px;
+    z-index: 9999;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    height: 100vh;
+}
+.menu-popup ul {
+    margin: 0;
+    padding: 0;
+}
+.menu-popup li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+.menu-popup .block-lang-mobile li a {
+    font-size: 10px;
+
+}
+.menu-popup li a {
+    font-size: 18px;
+    //color: rgb(255, 255, 255);
+    color: #231f20;
+    line-height: 1.4;
+    text-decoration: none;
+}
+.body_pointer * {
+    cursor: pointer;
+}
+
+.mob-menu-plashka {
+    height: 60px;
+    width: 100%;
+    background-color: #023f2c;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.menu-popup{
+    .in-mob-menu {
+        position: absolute;
+        //top: 0;
+        right: 0;
+
+        top: 17px;
+        li {
+            margin: 0;
+            //padding: 0 10px;
+            padding: 0 5px;
+
+            a {
+                color: white;
+            }
+        }
+
+        .block-lang-mobile {
+            height: 22px;
+        }
+    }
+}
+
+
+
+//end mob menu

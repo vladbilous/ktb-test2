@@ -1,0 +1,125 @@
+.about-us {
+
+    .about-us__title {
+        margin-top: 50px;
+        margin-bottom: 140px;
+    }
+
+    .about-us__title-h2 {
+        font-family: Black;
+        color: #023f2c;
+        font-size: 67px;
+
+        opacity: 0;
+        -webkit-transform: translateX(-10rem);
+        transform: translateX(-10rem);
+        transition: transform 3s, opacity 2s;
+
+        //margin-left: -800px;
+        //transition: transform .5s ease-in-out;
+
+        &.scroll-title {
+            //transform: translate(800px,0);
+            //-webkit-transform: translate(800px,0); /** Chrome & Safari **/
+            //-o-transform: translate(800px,0); /** Opera **/
+            //-moz-transform: translate(800px,0); /** Firefox **/
+            //width: fit-content;
+
+            opacity: 1;
+            transform: translateX(0);
+
+        }
+    }
+
+
+
+    .small-line-about-us {
+        height: 9px;
+        width: 60px;
+        background-color: #023f2c;
+
+        opacity: 0;
+        -webkit-transform: translateX(-10rem);
+        transform: translateX(-10rem);
+        transition: transform 3s, opacity 2s;
+
+        //height: 0;
+        //width: 0;
+        //transition: all 1.5s;
+
+
+        &.scroll-line {
+            //height: 9px;
+            //width: 60px;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+    .block-text-img {
+        margin-bottom: 100px;
+        background-color: #e6e7e8;
+    }
+
+    .about-us__img {
+        width: 100%;
+        margin-top: -80px;
+
+        //margin-top: 70px;
+        //width: 0;
+
+        //opacity: 0;
+        //transition: 1s;
+        //transform: scale(0) rotateZ(0deg);
+        //z-index: 5;
+
+        //&.about-us__img-anime {
+        //    opacity: 1;
+        //    transform: scale(1) rotateZ(0deg);
+        //}
+    }
+
+    .about-us__text-img {
+        display: inline-block;
+
+        opacity: 0;
+        -webkit-transform: translateY(10rem);
+        transform: translateY(10rem);
+        transition: transform 3s, opacity 2s;
+
+        &.about-us__text-img-anime {
+            opacity: 1;
+            transform: translateY(0);
+
+        }
+    }
+
+    .about-us-block__img {
+        width: 50%;
+        float: left;
+        margin-right: 30px;
+    }
+
+    .about-us__text {
+        margin: 50px 0;
+        //font-size: 0px;
+        //line-height: 0;
+        font-family: GothicRegular;
+        transition: 4s;
+        z-index: 1;
+        //font-size: 20px;
+        font-size: 16px;
+        line-height: 27px;
+
+        p {
+            font-family: GothicRegular;
+        }
+
+        //&.about-us__text-anime {
+        //    font-size: 20px;
+        //    line-height: 27px;
+        //
+        //}
+    }
+}

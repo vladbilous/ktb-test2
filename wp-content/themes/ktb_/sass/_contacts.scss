@@ -1,0 +1,122 @@
+.contacts {
+
+    margin-top: 50px;
+    margin-bottom: 100px;
+    min-height: calc(100vh - 463px);
+
+    .contacts__title {
+        margin-bottom: 50px;
+    }
+
+    .contacts__map-info {
+        //display: flex;
+        width: 100%;
+    }
+
+    .contacts__map-block {
+        width: calc(100% - 375px);
+        padding-right: 40px;
+        opacity: 0;
+        -webkit-transform: translateY(10rem);
+        transform: translateY(10rem);
+        transition: transform 3s, opacity 2s;
+
+        &.contacts__map-block-anime {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .contacts__info {
+        width: 375px;
+    }
+
+    .map {
+        width: 100%;
+        height: 250px;
+    }
+
+    .contacts__info-text {
+        font-size: 17px;
+        padding-left: 20px;
+    }
+
+    .contacts__title-h2 {
+        font-family: Black;
+        color: #023f2c;
+        font-size: 67px;
+        opacity: 0;
+        -webkit-transform: translateX(-10rem);
+        transform: translateX(-10rem);
+        transition: transform 3s, opacity 2s;
+        //margin-left: -800px;
+        //transition: transform .5s ease-in-out;
+
+        &.scroll-title {
+            opacity: 1;
+            transform: translateX(0);
+            //transform: translate(800px,0);
+            //-webkit-transform: translate(800px,0); /** Chrome & Safari **/
+            //-o-transform: translate(800px,0); /** Opera **/
+            //-moz-transform: translate(800px,0); /** Firefox **/
+            //width: fit-content;
+        }
+    }
+
+
+    .small-line-contacts {
+        height: 9px;
+        width: 60px;
+        background-color: #023f2c;
+
+        opacity: 0;
+        -webkit-transform: translateX(-10rem);
+        transform: translateX(-10rem);
+        transition: transform 3s, opacity 2s;
+
+        //height: 0;
+        //width: 0;
+        //transition: all 1.5s;
+
+            &.scroll-line {
+                opacity: 1;
+                transform: translateX(0);
+                //height: 9px;
+                //width: 60px;
+            }
+    }
+
+
+
+    .img-icons {
+        opacity: 0;
+        transition: 3s opacity;
+
+            &.img-icons-anime {
+                opacity: 1;
+            }
+    }
+
+    tr {
+        position: relative;
+    }
+
+    .cit {
+        //position: absolute;
+        //right: -1000px;
+        //transition: 1s;
+
+        opacity: 0;
+        -webkit-transform: translateX(10rem);
+        transform: translateX(10rem);
+        transition: transform 3s, opacity 2s;
+
+        &.contacts__info-text-anime {
+            //position: relative;
+            //right: 0;
+
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}

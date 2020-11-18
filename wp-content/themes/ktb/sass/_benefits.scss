@@ -1,0 +1,125 @@
+.benefits {
+    .img-ben-mob {
+        display: none;
+    }
+
+    margin-bottom: 100px;
+    margin-top: 50px;
+
+
+
+    .benefits__title-h2 {
+        font-family: Black;
+        color: #023f2c;
+        font-size: 67px;
+
+        opacity: 0;
+        -webkit-transform: translateX(-10rem);
+        transform: translateX(-10rem);
+        transition: transform 3s, opacity 2s;
+        //margin-left: -800px;
+        //transition: transform .5s ease-in-out;
+
+        &.scroll-title {
+            opacity: 1;
+            transform: translateX(0);
+
+            //transform: translate(800px,0);
+            //-webkit-transform: translate(800px,0); /** Chrome & Safari **/
+            //-o-transform: translate(800px,0); /** Opera **/
+            //-moz-transform: translate(800px,0); /** Firefox **/
+            //width: fit-content;
+
+        }
+    }
+
+
+
+
+
+
+    .small-line-benefits {
+        background-color: #023f2c;
+        height: 9px;
+        width: 60px;
+
+        opacity: 0;
+        -webkit-transform: translateX(-10rem);
+        transform: translateX(-10rem);
+        transition: transform 3s, opacity 2s;
+
+        //height: 0;
+        //width: 0;
+        //transition: all 1.5s;
+
+        &.scroll-line {
+            opacity: 1;
+            transform: translateX(0);
+
+            //height: 9px;
+            //width: 60px;
+        }
+
+
+    }
+
+
+    .benefits__block-content {
+        background-color: #e6e7e8;
+
+    }
+    .one-benefit {
+        width: 14.6%;
+        float: left;
+        margin: 0 1%;
+        opacity: 0;
+        transition: 3s opacity;
+    }
+
+    .one-benefit-anime {
+        opacity: 1;
+
+    }
+
+    .row-benefits {
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+
+    .row-benefits {
+        display: inline-block;
+    }
+
+    .one-benefit__img-title {
+        text-align: center;
+        img {
+            height: 53px;
+        }
+    }
+
+    .row-benefits__description {
+        text-align: left;
+        font-size: 13px;
+        font-family: GothicRegular;
+    }
+
+    .row-benefits__title{
+        font-size: 17px;
+        color: #002c1b;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    .benefits__title {
+        margin-bottom: 50px;
+    }
+
+    .img-benefist {
+        transition: all .5s ease-out;
+
+        &.img-benefist-anime{
+            transform: scale(1.2);
+        }
+    }
+
+}
